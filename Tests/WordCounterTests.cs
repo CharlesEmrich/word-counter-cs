@@ -23,7 +23,7 @@ namespace WordCounter
     {
       //Arrange
       RepeatCounter instance = new RepeatCounter("the cat is fast", "cat fast");
-      Dictionary<string, int> expectedOutput = new Dictionary<string, int> {{"cat", 1}};
+      Dictionary<string, int> expectedOutput = new Dictionary<string, int> {{"cat", 1}, {"fast", 1}};
       //Act
       Dictionary<string, int> output = instance.CountRepeats();
       //Assert

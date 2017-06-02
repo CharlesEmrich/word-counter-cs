@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace WordCounter.Objects
@@ -5,13 +6,14 @@ namespace WordCounter.Objects
   public class RepeatCounter
   {
     private string _corpus;
-    private List<string> _searchTerms = new List<string> {};
+    // private List<string> _searchTerms = new List<string> {};
+    private string[] _searchTerms;
     private Dictionary<string, int> _counts = new Dictionary<string, int> {};
 
     public RepeatCounter(string corpus, string searchTerms)
     {
       _corpus = corpus;
-      _searchTerms.Add(searchTerms);
+      _searchTerms = searchTerms.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries);;
     }
     public Dictionary<string, int> CountRepeats()
     {
