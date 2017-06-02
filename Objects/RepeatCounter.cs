@@ -20,6 +20,8 @@ namespace WordCounter.Objects
       foreach (string query in _searchTerms) {
         if (_corpus.Contains(query)) {
           _counts.Add(query, 1);
+        } else {
+          _counts.Add(query, 0);
         }
       }
       return _counts;
