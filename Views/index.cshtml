@@ -3,14 +3,23 @@
 }
 
 <form action="/" method="post">
-  <label for="corpus">Text to be searched:</label>
-  <textarea name="corpus" rows="8" cols="80"></textarea>
-  <label for="search-terms">What words should we look for? (separated by spaces)</label>
-  <input type="text" name="search-terms">
-  <button type="submit">Search it!</button>
+  <div class="form-group">
+    <label for="corpus">Text to be searched:</label>
+    <textarea class="form-control" name="corpus" rows="8" cols="80"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="search-terms">What words should we look for? (separated by spaces)</label>
+    <input class="form-control" type="text" name="search-terms">
+  </div>
+  <button class="btn btn-default" type="submit">Search it!</button>
 </form>
 
 @if(Model != null)
 {
-  <p>Hello World</p>
+  <ul>
+    @foreach(var word in Model)
+    {
+      <li>@word.Key : @word.Value</li>
+    }
+  </ul>
 }

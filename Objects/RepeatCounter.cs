@@ -7,7 +7,6 @@ namespace WordCounter.Objects
   {
     private string _corpus;
     private string[] _corpusSplit;
-    // private List<string> _searchTerms = new List<string> {};
     private string[] _searchTerms;
     private Dictionary<string, int> _counts = new Dictionary<string, int> {};
 
