@@ -1,3 +1,16 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
+
+<form action="/" method="post">
+  <label for="corpus">Text to be searched:</label>
+  <textarea name="corpus" rows="8" cols="80"></textarea>
+  <label for="search-terms">What words should we look for? (separated by spaces)</label>
+  <input type="text" name="search-terms">
+  <button type="submit">Search it!</button>
+</form>
+
+@if(Model != null)
+{
+  <p>Hello World</p>
+}
