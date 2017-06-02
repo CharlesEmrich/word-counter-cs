@@ -7,6 +7,16 @@ namespace WordCounter
 {
   public class WordCounterTest
   {
-
+    [Fact]
+    public void CountRepeats_WordAppears_CatOne()
+    {
+      //Arrange
+      RepeatCounter instance = new RepeatCounter("the cat is fast", "cat");
+      Dictionary<string, int> expectedOutput = new Dictionary<string, int> {{"cat", 1}};
+      //Act
+      Dictionary<string, int> output = instance.CountRepeats();
+      //Assert
+      Assert.Equal(expectedOutput, output);
+    }
   }
 }
