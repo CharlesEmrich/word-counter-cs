@@ -1,8 +1,8 @@
 using System;
 using Nancy;
-using RockPaperScissors.Objects;
+using WordCounter.Objects;
 
-namespace RockPaperScissors
+namespace WordCounter
 {
   public class HomeModule : NancyModule
   {
@@ -11,8 +11,6 @@ namespace RockPaperScissors
       Get["/"] = _ => {
         return View["index.cshtml"];
       };
-
-
     }
   }
 }

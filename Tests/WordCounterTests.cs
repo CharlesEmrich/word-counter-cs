@@ -1,12 +1,12 @@
 using Xunit;
 using System;
 using System.Collections.Generic;
-using RockPaperScissors.Objects;
+using WordCounter.Objects;
 
-namespace RockPaperScissors
+namespace WordCounter
 {
-  public class RockPaperScissorsTest
+  public class WordCounterTest
   {
-    
+
   }
 }
