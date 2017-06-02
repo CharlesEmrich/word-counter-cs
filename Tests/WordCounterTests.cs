@@ -40,5 +40,27 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedOutput, output);
     }
+    [Fact]
+    public void CountRepeats_WordAppearsTwice_CatTwo()
+    {
+      //Arrange
+      RepeatCounter instance = new RepeatCounter("that cat is one fast cat", "cat");
+      Dictionary<string, int> expectedOutput = new Dictionary<string, int> {{"cat", 2}};
+      //Act
+      Dictionary<string, int> output = instance.CountRepeats();
+      //Assert
+      Assert.Equal(expectedOutput, output);
+    }
+    [Fact]
+    public void CountRepeats_MultipleWordsAppearsTwice_CatTwoTheTwo()
+    {
+      //Arrange
+      RepeatCounter instance = new RepeatCounter("the cat is the fastest cat", "cat the");
+      Dictionary<string, int> expectedOutput = new Dictionary<string, int> {{"cat", 2}};
+      //Act
+      Dictionary<string, int> output = instance.CountRepeats();
+      //Assert
+      Assert.Equal(expectedOutput, output);
+    }
   }
 }
