@@ -11,11 +11,15 @@ namespace WordCounter.Objects
     public RepeatCounter(string corpus, string searchTerms)
     {
       _corpus = corpus;
-
+      _searchTerms.Add(searchTerms);
     }
     public Dictionary<string, int> CountRepeats()
     {
-      
+      foreach (string query in _searchTerms) {
+        if (_corpus.Contains(query)) {
+          _counts.Add(query, 1);
+        }
+      }
       return _counts;
     }
   }
